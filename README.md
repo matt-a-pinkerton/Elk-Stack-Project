@@ -155,6 +155,7 @@ You can either navigate to the public IP address of your ELK server and add :560
 
 	[elk]
 	10.1.0.4
+
 :wq
 
 - ansible-playbook ELK.yml
