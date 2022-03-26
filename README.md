@@ -9,36 +9,10 @@ Diagram/diagram.jpg
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
----
-- name: installing and launching filebeat
-  hosts: webservers
-  become: yes
-  tasks:
 
-  - name: download filebeat deb
-    command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
-
-  - name: install filebeat deb
-    command: dpkg -i filebeat-7.4.0-amd64.deb
-
-  - name: drop in filebeat.yml
-    copy:
-      src: /etc/ansible/files/filebeat-config.yml
-      dest: /etc/filebeat/filebeat.yml
-
-  - name: enable and configure system module
-    command: filebeat modules enable system
-
-  - name: setup filebeat
-    command: filebeat setup
-
-  - name: start filebeat service
-    command: service filebeat start
-
-  - name: enable service filebeat on boot
-    systemd:
-      name: filebeat
-      enabled: yes
+Elk Playbook to install and configure the ELK server.
+Filebeat Playbook to install Filebeat on the target machines.
+Metricbeat Playbook to install Metricbeat on the target machines.
 
 This document contains the following details:
 - Description of the Topology
@@ -99,8 +73,9 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
+
+
 https://github.com/wolf266/Elk-Project/blob/main/Images/ELk.jpg
-Images/Elk.jpg
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -157,13 +132,13 @@ vi hosts
 
 	[webservers]
 
-	10.0.0.5
+	10.0.0.5 ansible_python_interpreter=/usr/bin/python3
 
-	10.0.0.6
+	10.0.0.6 ansible_python_interpreter=/usr/bin/python3
 
 	[elk]
 
-	10.1.0.4
+	10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
 :wq
 
@@ -173,4 +148,4 @@ ansible-playbook Filebeat.yml
 
 ansible-playbook Metricbeat.yml
 
-Once complete either run “curl http://10.1.0.4:5601” or enter the address into a browser to verify success.
+Once complete either run “curl http://10.1.0.4:5601” or enter the public IP address of the elk server followed by “:5601” into a browser to verify success.
