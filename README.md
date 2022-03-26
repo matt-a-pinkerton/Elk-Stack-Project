@@ -132,10 +132,32 @@ The files with an extension of .yml are playbook files and are located in /etc/a
 - Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 
 
-To specify what servers have Filebeat or Elk on you must modify the hosts file with in the directory /etc/ansible/files
+To specify what servers have Filebeat or Elk installed, you must modify the hosts file with in the directory /etc/ansible/files
 
 - Which URL do you navigate to in order to check that the ELK server is running?
 
 You can either navigate to the public IP address of your ELK server and add :5601 at the end to see if it pops up.  Otherwise, you can run the command curl http://(Elk_Server_Private_IP):5601 to see if it responds with and HTML response.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- Provide the specific commands the user will need to run to download the playbook, update the files, etc.
+
+cd /etc/ansible
+mkdir files
+git clone https://github.com/wolf266/Elk-Project
+cp ELK-Project/playbooks/* .
+cp ELK-Projects/files/* ./files
+
+cd /etc/ansible
+vi hosts
+	[webservers]
+	10.0.0.5
+	10.0.0.6
+
+	[elk]
+	10.1.0.4
+:wq
+
+ansible-playbook ELK.yml
+ansible-playbook Filebeat.yml
+ansible-playbook Metricbeat.yml
+
+Once complete either run “curl http://10.1.0.4:5601” or enter the address into a browser to verify success.
