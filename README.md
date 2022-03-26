@@ -140,26 +140,36 @@ You can either navigate to the public IP address of your ELK server and add :560
 
 - Provide the specific commands the user will need to run to download the playbook, update the files, etc.
 
-- cd /etc/ansible
-- mkdir files
-- git clone https://github.com/wolf266/Elk-Project
-- cp ELK-Project/playbooks/* .
-- cp ELK-Projects/files/* ./files
+cd /etc/ansible
 
-- cd /etc/ansible
-- vi hosts
+mkdir files
+
+git clone https://github.com/wolf266/Elk-Project
+
+cp ELK-Project/playbooks/* .
+
+cp ELK-Projects/files/* ./files
+
+cd /etc/ansible
+
+vi hosts
 
 	[webservers]
+
 	10.0.0.5
+
 	10.0.0.6
 
 	[elk]
+
 	10.1.0.4
 
 :wq
 
-- ansible-playbook ELK.yml
-- ansible-playbook Filebeat.yml
-- ansible-playbook Metricbeat.yml
+ansible-playbook ELK.yml
+
+ansible-playbook Filebeat.yml
+
+ansible-playbook Metricbeat.yml
 
 Once complete either run “curl http://10.1.0.4:5601” or enter the address into a browser to verify success.
