@@ -125,11 +125,11 @@ SSH into the control node and follow the steps below:
 - Run the playbook and navigate to the servers to check that the installation worked as expected.
 
 TODO: Answer the following questions:
-- _Which file is the playbook? Where do you copy it?
-The files with an extension of .yml are playbook files and are located in /etc/ansible
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-To specify what servers have Filebeat or Elk on you must modify the hosts file with in the directory /etc/ansible/files
-- _Which URL do you navigate to in order to check that the ELK server is running?
-You can either navigate to the public IP address of your ELK server and add :5601 at the end to see if it pops up.  Otherwise, you can run the command curl http://(Elk_Server_Private_IP):5601 to see if it responds with and HTML response.
+- Which file is the playbook? Where do you copy it?
+	The files with an extension of .yml are playbook files and are located in /etc/ansible
+- Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+	To specify what servers have Filebeat or Elk on you must modify the hosts file with in the directory /etc/ansible/files
+- Which URL do you navigate to in order to check that the ELK server is running?
+	You can either navigate to the public IP address of your ELK server and add :5601 at the end to see if it pops up.  Otherwise, you can run the command curl http://(Elk_Server_Private_IP):5601 to see if it responds with and HTML response.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
