@@ -9,10 +9,9 @@ Diagram/diagram.jpg
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-
-- Elk Playbook to install and configure the ELK server.
-- Filebeat Playbook to install Filebeat on the target machines.
-- Metricbeat Playbook to install Metricbeat on the target machines.
+- [Elk Playbook](https://github.com/wolf266/Elk-Project/blob/main/Ansible/ELK.yml) to install and configure the ELK server.
+- [Filebeat Playbook](https://github.com/wolf266/Elk-Project/blob/main/Ansible/Filebeat.yml) to install Filebeat on the target machines.
+- [Metricbeat Playbook](https://github.com/wolf266/Elk-Project/blob/main/Ansible/Metricbeat.yml) to install Metricbeat on the target machines.
 
 This document contains the following details:
 - Description of the Topology
@@ -21,7 +20,6 @@ This document contains the following details:
   - Beats in Use
   - Machines Being Monitored
 - How to Use the Ansible Build
-
 
 ### Description of the Topology
 
