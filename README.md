@@ -106,7 +106,7 @@ The files with an extension of “.yml” are playbook files and are located in /etc
 
 - Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 
-To specify what servers have Filebeat or Elk installed, you must modify the hosts file with in the directory /etc/ansible/files
+To specify what servers have Filebeat or Elk installed, you must modify the hosts file within the directory /etc/ansible
 
 - Which URL do you navigate to in order to check that the ELK server is running?
 
