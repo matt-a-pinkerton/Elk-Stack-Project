@@ -113,29 +113,29 @@ To specify what servers have Filebeat or Elk installed, you must modify the host
 You can either navigate to the public IP address of your ELK server and add :5601 at the end to see if it pops up.  Otherwise, you can run the command curl http://(Elk_Server_Private_IP):5601 to see if it responds with and HTML response.
 
 ### Commands for Usage
-- The specific commands the user will need to run to download the playbook, update the files, etc.
+The specific commands the user will need to run to download the playbook, update the files, etc.
 
-cd /etc/ansible
+- cd /etc/ansible
 
-mkdir files – create needed dir
-mkdir roles – create needed dir
+- mkdir files – create needed dir
+- mkdir roles – create needed dir
 
-git clone https://github.com/wolf266/Elk-Project - clone the repository
+- git clone https://github.com/wolf266/Elk-Project - clone the repository
 
-cp -R /Elk-Project/Ansible/* /etc/ansible/roles – copy playbook files to dir
+- cp -R /Elk-Project/Ansible/* /etc/ansible/roles – copy playbook files to dir
 
-cp -R /Elk-Project/Linux/* /etc/ansible/files – copy config files to dir
+- cp -R /Elk-Project/Linux/* /etc/ansible/files – copy config files to dir
 
-mv /etc/ansible/files/hosts /etc/ansible – copy hosts file to dir
+- mv /etc/ansible/files/hosts /etc/ansible – copy hosts file to dir
 
-vi /etc/ansible/hosts – edit the host file with correct IP’s
+- vi /etc/ansible/hosts – edit the host file with correct IP’s
 
-![alt text](https://github.com/wolf266/Elk-Project/blob/main/Images/hosts.jpg “Example proprties”)
+![alt text](https://github.com/wolf266/Elk-Project/blob/main/Images/hosts.jpg "Example proprties")
 
-ansible-playbook /etc/ansible/roles/ELK.yml – run the playbook
+- ansible-playbook /etc/ansible/roles/ELK.yml – run the playbook
 
-ansible-playbook /etc/ansible/roles/Filebeat.yml – run the playbook
+- ansible-playbook /etc/ansible/roles/Filebeat.yml – run the playbook
 
-ansible-playbook /etc/ansible/roles/Metricbeat.yml – run the playbook
+- ansible-playbook /etc/ansible/roles/Metricbeat.yml – run the playbook
 
 Once complete either run “curl http://10.1.0.4:5601” in terminal or enter the public IP address of the elk server followed by “:5601” into a browser to verify success.
