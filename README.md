@@ -95,7 +95,7 @@ SSH into the control node and follow the steps below:
 - Copy the playbook file to the Ansible control node.
 - Update the hosts file to include proper IP address for the Elk server.  You also will need to ensure that the proper IP address for the webservers you are monitoring are listed as well.  Example below.
 
-![alt text](https://github.com/wolf266/Elk-Project/blob/main/Images/hosts.jpg “Example proprties”)
+![alt text](https://github.com/wolf266/Elk-Project/blob/main/Images/hosts.jpg "Example proprties")
 
 - Run the playbook and then navigate to the Elk servers public IP with the port “:5601” to check that the installation worked as expected.
 
