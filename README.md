@@ -1,5 +1,5 @@
 # Elk-Project
-Creation of an elk stack on cloud network
+Creation and deployment of an Elk Stack (Elasticsearch) on an Azure cloud network:
 
 ## Automated ELK Stack Deployment
 
@@ -62,12 +62,12 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - This drastically reduces the potential for human error and simplifies the process of configuring potentially thousands of machines identically all at once.
 
 The playbook implements the following tasks:
-- Install Docker.io ñ using apt
-- Install Python3-pip ñ using apt
-- Install Docker ñ using pip
-- Adjusts the virtual memory ñ using sysctl
+- Install Docker.io ‚Äì using apt
+- Install Python3-pip ‚Äì using apt
+- Install Docker ‚Äì using pip
+- Adjusts the virtual memory ‚Äì using sysctl
 - Start and run docker with specific open ports
-- Enable docker service on boot ñ using systemd
+- Enable docker service on boot ‚Äì using systemd
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -97,12 +97,12 @@ SSH into the control node and follow the steps below:
 
 ![alt text](https://github.com/wolf266/Elk-Project/blob/main/Images/hosts.jpg "Example proprties")
 
-- Run the playbook and then navigate to the Elk servers public IP with the port ì:5601î to check that the installation worked as expected.
+- Run the playbook and then navigate to the Elk servers public IP with the port ‚Äú:5601‚Äù to check that the installation worked as expected.
 
 Answer the following questions:
 - Which file is the playbook? Where do you copy it?
 
-The files with an extension of ì.ymlî are playbook files and are located in /etc/ansible
+The files with an extension of ‚Äú.yml‚Äù are playbook files and are located in /etc/ansible
 
 - Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 
@@ -117,25 +117,25 @@ The specific commands the user will need to run to download the playbook, update
 
 - cd /etc/ansible
 
-- mkdir files ñ create needed dir
-- mkdir roles ñ create needed dir
+- mkdir files ‚Äì create needed dir
+- mkdir roles ‚Äì create needed dir
 
 - git clone https://github.com/wolf266/Elk-Project - clone the repository
 
-- cp -R /Elk-Project/Ansible/* /etc/ansible/roles ñ copy playbook files to dir
+- cp -R /Elk-Project/Ansible/* /etc/ansible/roles ‚Äì copy playbook files to dir
 
-- cp -R /Elk-Project/Linux/* /etc/ansible/files ñ copy config files to dir
+- cp -R /Elk-Project/Linux/* /etc/ansible/files ‚Äì copy config files to dir
 
-- mv /etc/ansible/files/hosts /etc/ansible ñ copy hosts file to dir
+- mv /etc/ansible/files/hosts /etc/ansible ‚Äì copy hosts file to dir
 
-- vi /etc/ansible/hosts ñ edit the host file with correct IPís
+- vi /etc/ansible/hosts ‚Äì edit the host file with correct IP‚Äôs
 
 ![alt text](https://github.com/wolf266/Elk-Project/blob/main/Images/hosts.jpg "Example proprties")
 
-- ansible-playbook /etc/ansible/roles/ELK.yml ñ run the playbook
+- ansible-playbook /etc/ansible/roles/ELK.yml ‚Äì run the playbook
 
-- ansible-playbook /etc/ansible/roles/Filebeat.yml ñ run the playbook
+- ansible-playbook /etc/ansible/roles/Filebeat.yml ‚Äì run the playbook
 
-- ansible-playbook /etc/ansible/roles/Metricbeat.yml ñ run the playbook
+- ansible-playbook /etc/ansible/roles/Metricbeat.yml ‚Äì run the playbook
 
-Once complete either run ìcurl http://10.1.0.4:5601î in terminal or enter the public IP address of the elk server followed by ì:5601î into a browser to verify success.
+Once complete either run ‚Äúcurl http://10.1.0.4:5601‚Äù in terminal or enter the public IP address of the elk server followed by ‚Äú:5601‚Äù into a browser to verify success.
