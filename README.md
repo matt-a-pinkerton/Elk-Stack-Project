@@ -5,13 +5,13 @@ Creation and deployment of an Elk Stack (Elasticsearch) on an Azure cloud networ
 
 The files in this repository were used to configure the network depicted below.
 
-![alt text](https://github.com/wolf266/Elk-Project/blob/main/Diagrams/Project1.jpg)
+![alt text](https://github.com/wolf266/Elk-Stack-Project/blob/main/Diagrams/Project1.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-- [Elk Playbook](https://github.com/wolf266/Elk-Project/blob/main/Ansible/ELK.yml) to install and configure the ELK server.
-- [Filebeat Playbook](https://github.com/wolf266/Elk-Project/blob/main/Ansible/Filebeat.yml) to install Filebeat on the target server.
-- [Metricbeat Playbook](https://github.com/wolf266/Elk-Project/blob/main/Ansible/Metricbeat.yml) to install Metricbeat on the target server.
+- [Elk Playbook](https://github.com/wolf266/Elk-Stack-Project/blob/main/Ansible/ELK.yml) to install and configure the ELK server.
+- [Filebeat Playbook](https://github.com/wolf266/Elk-Stack-Project/blob/main/Ansible/Filebeat.yml) to install Filebeat on the target server.
+- [Metricbeat Playbook](https://github.com/wolf266/Elk-Stack-Project/blob/main/Ansible/Metricbeat.yml) to install Metricbeat on the target server.
 
 This document contains the following details:
 - Description of the Topology
@@ -71,7 +71,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![alt text](https://github.com/wolf266/Elk-Project/blob/main/Images/ELk.jpg)
+![alt text](https://github.com/wolf266/Elk-Stack-Project/blob/main/Images/ELk.jpg)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -95,7 +95,7 @@ SSH into the control node and follow the steps below:
 - Copy the playbook file to the Ansible control node.
 - Update the hosts file to include proper IP address for the Elk server.  You also will need to ensure that the proper IP address for the webservers you are monitoring are listed as well.  Example below.
 
-![alt text](https://github.com/wolf266/Elk-Project/blob/main/Images/hosts.jpg "Example proprties")
+![alt text](https://github.com/wolf266/Elk-Stack-Project/blob/main/Images/hosts.jpg "Example proprties")
 
 - Run the playbook and then navigate to the Elk servers public IP with the port “:5601” to check that the installation worked as expected.
 
@@ -120,7 +120,7 @@ The specific commands the user will need to run to download the playbook, update
 - mkdir files – create needed dir
 - mkdir roles – create needed dir
 
-- git clone https://github.com/wolf266/Elk-Project - clone the repository
+- git clone https://github.com/wolf266/Elk-Stack-Project - clone the repository
 
 - cp -R /Elk-Project/Ansible/* /etc/ansible/roles – copy playbook files to dir
 
@@ -130,7 +130,7 @@ The specific commands the user will need to run to download the playbook, update
 
 - vi /etc/ansible/hosts – edit the host file with correct IP’s
 
-![alt text](https://github.com/wolf266/Elk-Project/blob/main/Images/hosts.jpg "Example proprties")
+![alt text](https://github.com/wolf266/Elk-Stack-Project/blob/main/Images/hosts.jpg "Example proprties")
 
 - ansible-playbook /etc/ansible/roles/ELK.yml – run the playbook
 
