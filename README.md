@@ -1,4 +1,4 @@
-# Elk-Project
+# Elk-Stack-Project
 Creation and deployment of an Elk Stack (Elasticsearch) on an Azure cloud network:
 
 ## Automated ELK Stack Deployment
