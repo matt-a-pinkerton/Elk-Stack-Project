@@ -112,6 +112,7 @@ To specify what servers have Filebeat or Elk installed, you must modify the host
 
 You can either navigate to the public IP address of your ELK server and add :5601 at the end to see if it pops up.
 Or you can run the curl command with the IP of the elk server and add :5601 at the end to see if it responds with and HTML response.
+
 ---
 ### Commands for Usage
 The specific commands the user will need to run to download the playbook, update the files, etc.
