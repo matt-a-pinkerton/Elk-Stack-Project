@@ -110,7 +110,8 @@ To specify what servers have Filebeat or Elk installed, you must modify the host
 
 - Which URL do you navigate to in order to check that the ELK server is running?
 
-You can either navigate to the public IP address of your ELK server and add :5601 at the end to see if it pops up.  
+You can either navigate to the public IP address of your ELK server and add :5601 at the end to see if it pops up.
+
 Otherwise, you can run the command curl "http://(Elk_Server_Private_IP):5601" to see if it responds with and HTML response.
 ---
 ### Commands for Usage
