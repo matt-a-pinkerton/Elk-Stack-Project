@@ -37,7 +37,7 @@ The configuration details of each machine may be found below.
 | DVWA 1   |Web Server| 10.0.0.5   | Linux            |
 | DVWA 2   |Web Server| 10.0.0.6   | Linux            |
 | ELK      |Monitoring| 10.1.0.4   | Linux            |
-
+---
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
@@ -55,7 +55,7 @@ A summary of the access policies in place can be found in the table below.
 | DVWA 1   | No                  | 10.0.0.1-.254        |
 | DVWA 2   | No                  | 10.0.0.1-.254        |
 | ELK      | No                  | 10.0.0.1-.254        |
-
+---
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
@@ -72,7 +72,7 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![alt text](https://github.com/wolf266/Elk-Stack-Project/blob/main/Images/ELk.jpg)
-
+---
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 | Name     | IP Address |
@@ -87,7 +87,7 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - Filebeat: sends and centralizes log data by monitoring log files or locations specified, collecting log events, and forwards them either to Elasticsearch or Logstash for indexing.
 - Metricbeat: takes the metrics and statistics that it collects from the OS and services and sends them to the output that specified, such as Elasticsearch or Logstash
-
+---
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
@@ -111,7 +111,7 @@ To specify what servers have Filebeat or Elk installed, you must modify the host
 - Which URL do you navigate to in order to check that the ELK server is running?
 
 You can either navigate to the public IP address of your ELK server and add :5601 at the end to see if it pops up.  Otherwise, you can run the command curl http://(Elk_Server_Private_IP):5601 to see if it responds with and HTML response.
-
+---
 ### Commands for Usage
 The specific commands the user will need to run to download the playbook, update the files, etc.
 
